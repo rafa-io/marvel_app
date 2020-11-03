@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/pagination"
+        tools:listitem="@layout/inflate_superheroes_item"
+        tools:itemCount="20"
+        />
+
+    <LinearLayout
+        android:id="@+id/pagination"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width = "match_parent"
+        android:layout_height = "56dp"
+        android:background = "@color/white"
+        android:gravity = "center_vertical|end"
+        android:orientation = "vertical">
+
+        <LinearLayout
+            android:background="@color/colorPrimaryDark"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:gravity = "center_vertical|center"
+            android:orientation = "horizontal">
+            <ImageView
+                android:visibility="invisible"
+                android:id = "@+id/paginationPrevious"
+                android:layout_width = "54dp"
+                android:layout_height = "54dp"
+                android:layout_marginEnd = "24dp"
+                android:contentDescription = "@string/pagination_previous"
+                app:srcCompat = "@drawable/ic_arrow_left_white"
+                tools:src = "@drawable/ic_arrow_left_white"/>
+            <TextView
+                android:id = "@+id/paginationDisplayed"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_marginEnd = "24dp"
+                android:text = "1-20 de 100"
+                android:textAlignment = "textEnd"
+                android:textColor = "@color/white"
+                android:textSize = "12sp"/>
+            <ImageView
+                android:id = "@+id/paginationNext"
+                android:layout_width = "54dp"
+                android:layout_height = "54dp"
+                android:layout_marginEnd = "14dp"
+                android:contentDescription = "@string/pagination_next"
+                app:srcCompat = "@drawable/ic_arrow_right_white"
+                tools:src = "@drawable/ic_arrow_right_white"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width = "match_parent"
+            android:layout_height = "1dp"
+            android:layout_gravity = "bottom"
+            android:layout_marginBottom="1dp"
+            android:background = "@color/discreet_dark"/>
+
+    </LinearLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/loadingView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/AVLoadingIndicatorView"
+        app:indicatorColor="@color/colorPrimary"
+        app:indicatorName="BallClipRotateIndicator"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/pagination"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

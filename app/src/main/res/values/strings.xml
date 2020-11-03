@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Marvel</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="rows_per_page">Linhas por página</string>
+    <string name="dropdown">dropdow</string>
+    <string name="pagination_previous">previous</string>
+    <string name="pagination_next">next</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
+</resources>
